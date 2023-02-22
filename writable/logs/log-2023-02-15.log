@@ -1,0 +1,248 @@
+CRITICAL - 2023-02-15 16:52:15 --> Undefined variable $header
+in APPPATH\Views\unidades\unidades.php on line 1.
+ 1 APPPATH\Views\unidades\unidades.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $header', 'APPPATH\\Views\\unidades\\unidades.php', 1)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\unidades\\unidades.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('unidades/unidades', [], true)
+ 5 APPPATH\Controllers\Unidades.php(17): view('unidades/unidades', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Unidades->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Unidades))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-15 16:55:18 --> compact(): Undefined variable $&lt;!-- DEBUG-VIEW START 1 APPPATH\Views\templates\header.php --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;es&quot;&gt;
+
+&lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot; /&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, shrink-to-fit=no&quot; /&gt;
+    &lt;meta name=&quot;description&quot; content=&quot;&quot; /&gt;
+    &lt;meta name=&quot;author&quot; content=&quot;&quot; /&gt;
+    &lt;title&gt;Trazos - Gestión&lt;/title&gt;
+    &lt;link href=&quot;https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css&quot; rel=&quot;stylesheet&quot; /&gt;
+    &lt;link href=&quot;css/styles.css&quot; rel=&quot;stylesheet&quot; /&gt;
+    &lt;!-- Bootstrap CSS v5.2.1 --&gt; &lt;!-- con iconos (bundle) --&gt;
+    &lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT&quot; crossorigin=&quot;anonymous&quot;&gt;
+    &lt;!-- Bootstrap Icons --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css&quot;&gt;
+
+    &lt;!-- jQuery v3. --&gt;
+    &lt;script src=&quot;https://code.jquery.com/jquery-3.6.3.min.js&quot; integrity=&quot;sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://use.fontawesome.com/releases/v6.1.0/js/all.js&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body class=&quot;sb-nav-fixed&quot;&gt;
+    &lt;nav class=&quot;sb-topnav navbar navbar-expand navbar-dark bg-dark&quot;&gt;
+        &lt;!-- Navbar Brand--&gt;
+        &lt;a class=&quot;navbar-brand ps-3&quot; href=&quot;index.html&quot;&gt;Trazos - Gestión&lt;/a&gt;
+        &lt;!-- Sidebar Toggle--&gt;
+        &lt;button class=&quot;btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0&quot; id=&quot;sidebarToggle&quot; href=&quot;#!&quot;&gt;&lt;i class=&quot;fas fa-bars&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+        &lt;!-- Navbar Search--&gt;
+        &lt;!-- Navbar--&gt;
+        &lt;ul class=&quot;navbar-nav ms-auto  me-3 me-lg-4&quot;&gt;
+            &lt;li class=&quot;nav-item dropdown&quot;&gt;
+                &lt;a class=&quot;nav-link dropdown-toggle&quot; id=&quot;navbarDropdown&quot; href=&quot;#&quot; role=&quot;button&quot; data-bs-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot;&gt;&lt;i class=&quot;fas fa-user fa-fw&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                &lt;ul class=&quot;dropdown-menu dropdown-menu-end&quot; aria-labelledby=&quot;navbarDropdown&quot;&gt;
+                    &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#!&quot;&gt;Settings&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#!&quot;&gt;Activity Log&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;hr class=&quot;dropdown-divider&quot; /&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#!&quot;&gt;Logout&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/nav&gt;
+    &lt;div id=&quot;layoutSidenav&quot;&gt;
+        &lt;div id=&quot;layoutSidenav_nav&quot;&gt;
+            &lt;nav class=&quot;sb-sidenav accordion sb-sidenav-dark&quot; id=&quot;sidenavAccordion&quot;&gt;
+                &lt;div class=&quot;sb-sidenav-menu&quot;&gt;
+                    &lt;div class=&quot;nav&quot;&gt;
+                        &lt;a class=&quot;nav-link collapsed&quot; href=&quot;#&quot; data-bs-toggle=&quot;collapse&quot; data-bs-target=&quot;#collapseLayouts&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;collapseLayouts&quot;&gt;
+                            &lt;div class=&quot;sb-nav-link-icon&quot;&gt;&lt;i class=&quot;bi bi-basket2&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+                            Productos
+                            &lt;div class=&quot;sb-sidenav-collapse-arrow&quot;&gt;&lt;i class=&quot;fas fa-angle-down&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+                        &lt;/a&gt;
+                        &lt;div class=&quot;collapse&quot; id=&quot;collapseLayouts&quot; aria-labelledby=&quot;headingOne&quot; data-bs-parent=&quot;#sidenavAccordion&quot;&gt;
+                            &lt;nav class=&quot;sb-sidenav-menu-nested nav&quot;&gt;
+                                &lt;a class=&quot;nav-link&quot; href=&quot;layout-static.html&quot;&gt;Productos&lt;/a&gt;
+                                &lt;a class=&quot;nav-link&quot; href=&quot;http://localhost/trazos/public/unidades&quot;&gt;Unidades&lt;/a&gt;
+                                &lt;a class=&quot;nav-link&quot; href=&quot;layout-sidenav-light.html&quot;&gt;Categorías&lt;/a&gt;
+                            &lt;/nav&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/nav&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    
+&lt;!-- DEBUG-VIEW ENDED 1 APPPATH\Views\templates\header.php --&gt;
+
+in APPPATH\Controllers\Unidades.php on line 17.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'compact(): Undefined variable $&lt;!-- DEBUG-VIEW START 1 APPPATH\\Views\\templates\\header.php --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;es&quot;&gt;
+
+&lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot; /&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, shrink-to-fit=no&quot; /&gt;
+    &lt;meta name=&quot;description&quot; content=&quot;&quot; /&gt;
+    &lt;meta name=&quot;author&quot; content=&quot;&quot; /&gt;
+    &lt;title&gt;Trazos - Gestión&lt;/title&gt;
+    &lt;link href=&quot;https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css&quot; rel=&quot;stylesheet&quot; /&gt;
+    &lt;link href=&quot;css/styles.css&quot; rel=&quot;stylesheet&quot; /&gt;
+    &lt;!-- Bootstrap CSS v5.2.1 --&gt; &lt;!-- con iconos (bundle) --&gt;
+    &lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT&quot; crossorigin=&quot;anonymous&quot;&gt;
+    &lt;!-- Bootstrap Icons --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css&quot;&gt;
+
+    &lt;!-- jQuery v3. --&gt;
+    &lt;script src=&quot;https://code.jquery.com/jquery-3.6.3.min.js&quot; integrity=&quot;sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://use.fontawesome.com/releases/v6.1.0/js/all.js&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body class=&quot;sb-nav-fixed&quot;&gt;
+    &lt;nav class=&quot;sb-topnav navbar navbar-expand navbar-dark bg-dark&quot;&gt;
+        &lt;!-- Navbar Brand--&gt;
+        &lt;a class=&quot;navbar-brand ps-3&quot; href=&quot;index.html&quot;&gt;Trazos - Gestión&lt;/a&gt;
+        &lt;!-- Sidebar Toggle--&gt;
+        &lt;button class=&quot;btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0&quot; id=&quot;sidebarToggle&quot; href=&quot;#!&quot;&gt;&lt;i class=&quot;fas fa-bars&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+        &lt;!-- Navbar Search--&gt;
+        &lt;!-- Navbar--&gt;
+        &lt;ul class=&quot;navbar-nav ms-auto  me-3 me-lg-4&quot;&gt;
+            &lt;li class=&quot;nav-item dropdown&quot;&gt;
+                &lt;a class=&quot;nav-link dropdown-toggle&quot; id=&quot;navbarDropdown&quot; href=&quot;#&quot; role=&quot;button&quot; data-bs-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot;&gt;&lt;i class=&quot;fas fa-user fa-fw&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                &lt;ul class=&quot;dropdown-menu dropdown-menu-end&quot; aria-labelledby=&quot;navbarDropdown&quot;&gt;
+                    &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#!&quot;&gt;Settings&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#!&quot;&gt;Activity Log&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;hr class=&quot;dropdown-divider&quot; /&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#!&quot;&gt;Logout&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/nav&gt;
+    &lt;div id=&quot;layoutSidenav&quot;&gt;
+        &lt;div id=&quot;layoutSidenav_nav&quot;&gt;
+            &lt;nav class=&quot;sb-sidenav accordion sb-sidenav-dark&quot; id=&quot;sidenavAccordion&quot;&gt;
+                &lt;div class=&quot;sb-sidenav-menu&quot;&gt;
+                    &lt;div class=&quot;nav&quot;&gt;
+                        &lt;a class=&quot;nav-link collapsed&quot; href=&quot;#&quot; data-bs-toggle=&quot;collapse&quot; data-bs-target=&quot;#collapseLayouts&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;collapseLayouts&quot;&gt;
+                            &lt;div class=&quot;sb-nav-link-icon&quot;&gt;&lt;i class=&quot;bi bi-basket2&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+                            Productos
+                            &lt;div class=&quot;sb-sidenav-collapse-arrow&quot;&gt;&lt;i class=&quot;fas fa-angle-down&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+                        &lt;/a&gt;
+                        &lt;div class=&quot;collapse&quot; id=&quot;collapseLayouts&quot; aria-labelledby=&quot;headingOne&quot; data-bs-parent=&quot;#sidenavAccordion&quot;&gt;
+                            &lt;nav class=&quot;sb-sidenav-menu-nested nav&quot;&gt;
+                                &lt;a class=&quot;nav-link&quot; href=&quot;layout-static.html&quot;&gt;Productos&lt;/a&gt;
+                                &lt;a class=&quot;nav-link&quot; href=&quot;http://localhost/trazos/public/unidades&quot;&gt;Unidades&lt;/a&gt;
+                                &lt;a class=&quot;nav-link&quot; href=&quot;layout-sidenav-light.html&quot;&gt;Categorías&lt;/a&gt;
+                            &lt;/nav&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/nav&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    
+&lt;!-- DEBUG-VIEW ENDED 1 APPPATH\\Views\\templates\\header.php --&gt;
+', 'APPPATH\\Controllers\\Unidades.php', 17)
+ 2 APPPATH\Controllers\Unidades.php(17): compact('<!-- DEBUG-VIEW START 1 APPPATH\\Views\\templates\\header.php -->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Trazos - Gestión</title>
+    <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <!-- Bootstrap CSS v5.2.1 --> <!-- con iconos (bundle) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+    <!-- jQuery v3. -->
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="sb-nav-fixed">
+    <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+        <!-- Navbar Brand-->
+        <a class="navbar-brand ps-3" href="index.html">Trazos - Gestión</a>
+        <!-- Sidebar Toggle-->
+        <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+        <!-- Navbar Search-->
+        <!-- Navbar-->
+        <ul class="navbar-nav ms-auto  me-3 me-lg-4">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#!">Settings</a></li>
+                    <li><a class="dropdown-item" href="#!">Activity Log</a></li>
+                    <li>
+                        <hr class="dropdown-divider" />
+                    </li>
+                    <li><a class="dropdown-item" href="#!">Logout</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_nav">
+            <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                <div class="sb-sidenav-menu">
+                    <div class="nav">
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                            <div class="sb-nav-link-icon"><i class="bi bi-basket2"></i></div>
+                            Productos
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+                        <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="layout-static.html">Productos</a>
+                                <a class="nav-link" href="http://localhost/trazos/public/unidades">Unidades</a>
+                                <a class="nav-link" href="layout-sidenav-light.html">Categorías</a>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    
+<!-- DEBUG-VIEW ENDED 1 APPPATH\\Views\\templates\\header.php -->
+')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Unidades->index()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Unidades))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-15 16:56:05 --> Undefined variable $header
+in APPPATH\Views\unidades\unidades.php on line 1.
+ 1 APPPATH\Views\unidades\unidades.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $header', 'APPPATH\\Views\\unidades\\unidades.php', 1)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\unidades\\unidades.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('unidades/unidades', [], true)
+ 5 APPPATH\Controllers\Unidades.php(18): view('unidades/unidades', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Unidades->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Unidades))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-15 16:56:31 --> Undefined variable $data
+in APPPATH\Views\unidades\unidades.php on line 3.
+ 1 APPPATH\Views\unidades\unidades.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Views\\unidades\\unidades.php', 3)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\unidades\\unidades.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('unidades/unidades', [], true)
+ 5 APPPATH\Controllers\Unidades.php(18): view('unidades/unidades', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Unidades->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Unidades))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
